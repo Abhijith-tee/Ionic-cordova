@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Leader } from '../../shared/leader';
+import { LeaderProvider } from '../../providers/leader/leader';
 
 /**
  * Generated class for the AboutPage page.
@@ -7,7 +9,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
 @IonicPage()
 @Component({
   selector: 'page-about',
@@ -15,11 +16,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  leaders: Leader[];
+  errMsg: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private leaderService: LeaderProvider,
+    @Inject('BaseURL') private BaseURL) {
+  }
+
+  ngOnInit() {
+    this.leaderService.getLeaders()
+      .subscribe(leaders => this.leaders = leaders,
+        errmsg => this.errMsg = errmsg );
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutPage');
   }
-
 }
