@@ -23,11 +23,13 @@
     "@ionic-native/email-composer": "^5.27.0",
     "@ionic-native/http": "^5.26.0",
     "@ionic-native/local-notifications": "^5.27.0",
+    "@ionic-native/social-sharing": "^5.27.0",
     "@ionic-native/splash-screen": "4.20.0",
     "@ionic-native/status-bar": "4.20.0",
     "@ionic/pro": "2.0.4",
     "@ionic/storage": "2.2.0",
     "cordova-plugin-email": "1.2.7",
+    "cordova-plugin-x-socialsharing": "5.6.8",
     "ionic-angular": "3.9.9",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -41,7 +43,8 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-email": {}
+      "cordova-plugin-email": {},
+      "cordova-plugin-x-socialsharing": {}
     }
   }
 }
