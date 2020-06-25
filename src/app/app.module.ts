@@ -18,6 +18,7 @@ import { ReservationPage } from '../pages/reservation/reservation';
 import { AddcommentPage } from '../pages/addcomment/addcomment';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { Network } from '@ionic-native/network';
 
 
 
@@ -78,7 +79,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     LocalNotifications,
     EmailComposer,
     SocialSharing,
-    Camera
+    Camera,
+    Network
   ]
 })
 export class AppModule {}
