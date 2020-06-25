@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from '../shared/baseurl';
 import { IonicStorageModule } from '@ionic/storage';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -69,7 +70,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     PromotionProvider,
     ProcessHttpmsgProvider,
     FavoriteProvider,
-    LocalNotifications
+    LocalNotifications,
+    EmailComposer
   ]
 })
 export class AppModule {}
