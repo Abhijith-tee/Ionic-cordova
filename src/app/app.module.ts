@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from '../shared/baseurl';
 import { IonicStorageModule } from '@ionic/storage';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +17,7 @@ import { FavoritesPage } from '../pages/favorites/favorites';
 import { ReservationPage } from '../pages/reservation/reservation';
 import { AddcommentPage } from '../pages/addcomment/addcomment';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 
 
@@ -40,7 +42,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     FavoritesPage,
     ReservationPage,
     AddcommentPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     HttpClientModule,
@@ -59,7 +62,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     FavoritesPage,
     ReservationPage,
     AddcommentPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -73,7 +77,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     FavoriteProvider,
     LocalNotifications,
     EmailComposer,
-    SocialSharing
+    SocialSharing,
+    Camera
   ]
 })
 export class AppModule {}
